@@ -70,17 +70,19 @@ app.whenReady().then(() => {
 
 | ID | Name | 第三方 |
 | --- | --- | --- |
-| `ANGULAR_DEVTOOLS` | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh) | [地址](https://www.crxsoso.com/webstore/detail/ienfalfjdbdpebioblfackkekamfmbnh) |
-| `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) | [地址](https://www.crxsoso.com/webstore/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
-| `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) | [地址](https://www.crxsoso.com/webstore/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
-| `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) | [地址](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
-| `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) | [地址](https://www.crxsoso.com/webstore/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
-| `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) | [地址](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
-| `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [地址](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
-| `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [地址](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
-| `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [地址](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
+| `ANGULAR_DEVTOOLS` | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh) | [详情](https://www.crxsoso.com/webstore/detail/ienfalfjdbdpebioblfackkekamfmbnh) |
+| `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) | [详情](https://www.crxsoso.com/webstore/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
+| `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) | [详情](https://www.crxsoso.com/webstore/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
+| `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) | [详情](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
+| `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) | [详情](https://www.crxsoso.com/webstore/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
+| `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) | [详情](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
+| `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
+| `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
+| `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 
-**注意：**如果无法访问 [Chrome应用商店](https://chromewebstore.google.com/) 或者使用指定版本插件，可以通过一些第三方网站（[Crx搜搜](https://www.crxsoso.com/)、[CrxDL](https://crxdl.com/)）下载 `.crx` 文件后，改名后缀名为 `.zip`，使用压缩工具（[360压缩](https://yasuo.360.cn/)）解压，调用 [Electron](https://www.electronjs.org/docs/latest/tutorial/devtools-extension) 的 `session.defaultSession.loadExtension` 方法安装。
+**注意**
+
+如果无法访问 [Chrome应用商店](https://chromewebstore.google.com/) 或者使用指定版本插件，可以通过一些第三方网站（[Crx搜搜](https://www.crxsoso.com/)、[CrxDL](https://crxdl.com/)）下载 `.crx` 文件后，改名后缀名为 `.zip`，使用压缩工具（[360压缩](https://yasuo.360.cn/)）解压，调用 [Electron](https://www.electronjs.org/docs/latest/tutorial/devtools-extension) 的 `session.defaultSession.loadExtension` 方法安装。
 
 ```js
 const { app, session } = require('electron');

@@ -32,7 +32,7 @@ export interface DownloadOptions {
  * Synchronously creates a directory, like 'mkdir -p'
  * @param path directory path
  */
-export function mkdirp(path: string, empty?: boolean) {
+function mkdirp(path: string, empty?: boolean) {
   if (fs.existsSync(path)) {
     if (empty) {
       rmSync(path);
@@ -47,7 +47,7 @@ export function mkdirp(path: string, empty?: boolean) {
  * Synchronously removes files and directories
  * @param path file or directory path
  */
-export function rmSync(path: string) {
+function rmSync(path: string) {
   if (!fs.existsSync(path)) {
     return;
   }

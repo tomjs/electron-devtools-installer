@@ -1,8 +1,8 @@
 import { session } from 'electron';
-import { downloadExtension, downloadFile } from './utils';
+import { downloadExtension } from './utils';
 
 export * from './extensions';
-export { downloadExtension, downloadFile };
+export * from './utils';
 
 export interface InstallOptions {
   /**
