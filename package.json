@@ -1,6 +1,6 @@
 {
   "name": "@tomjs/electron-devtools-installer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Install Chrome extension for Electron, Support cjs/esm",
   "keywords": [
     "electron",
