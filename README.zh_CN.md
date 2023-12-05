@@ -104,7 +104,7 @@ app.whenReady().then(async () => {
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - 强制下载已安装插件，默认值为 `false`
 
-返回 `Promise<string | string[]>` - 扩展名称
+返回 `Promise<Electron.Extension | Electron.Extension[]>` - 扩展名称/版本等
 
 ### downloadExtension(extensionId[, options])
 
@@ -117,4 +117,4 @@ app.whenReady().then(async () => {
   - _attempts_: `number` - 尝试下载扩展程序的次数，默认为 `5`
   - _outPath_: `string` - 保存下载扩展的路径，默认为 `path.join(app.getPath('userData'), 'extensions')`
 
-返回 `Promise<string>` - 当 `unzip` 为 `true` 时返回已解压扩展路径，否则返回下载扩展路径。
+返回 `Promise<{ filePath: string; unzipPath?: string }>`

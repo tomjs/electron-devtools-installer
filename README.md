@@ -88,7 +88,7 @@ install chrome extension for electron
   - _forceDownload_: `boolean` - Force to download the extension even if it's already installed, default is `false`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr'` - Download url source `chrome`
 
-Returns `Promise<string | string[]>` - extension name
+Returns `Promise<Electron.Extension | Electron.Extension[]>` - extension name/version, etc.
 
 ### downloadExtension(extensionId[, options])
 
@@ -102,4 +102,4 @@ download chrome extension for electron
   - _outPath_: `string` - The path to save the downloaded extension, default is `path.join(app.getPath('userData'), 'extensions')`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr'` - Download url source `chrome`
 
-Returns `Promise<string>` - When `unzip` is `true`, returns the path to the unzipped extension path, otherwise returns the path to the downloaded extension path.
+Returns `Promise<{ filePath: string; unzipPath?: string }>`

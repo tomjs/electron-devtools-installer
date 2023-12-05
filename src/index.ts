@@ -31,17 +31,17 @@ export interface InstallOptions {
 export async function installExtension(
   extensionIds: string,
   options?: InstallOptions,
-): Promise<string>;
+): Promise<Electron.Extension>;
 
 export async function installExtension(
   extensionIds: string[],
   options?: InstallOptions,
-): Promise<string[]>;
+): Promise<Electron.Extension[]>;
 
 export async function installExtension(
   extensionIds: string | string[],
   options?: InstallOptions,
-): Promise<string | string[]> {
+): Promise<Electron.Extension | Electron.Extension[]> {
   const opts = Object.assign({}, options);
   const { loadExtensionOptions = {}, forceDownload } = opts;
 
@@ -59,7 +59,9 @@ export async function installExtension(
   }
 
   if (Array.isArray(extensionIds)) {
-    return Promise.all(extensionIds.map(id => installExtension(id, options))) as Promise<string[]>;
+    return Promise.all(extensionIds.map(id => installExtension(id, options))) as Promise<
+      Electron.Extension[]
+    >;
   }
 
   let crxId: string;
@@ -69,20 +71,18 @@ export async function installExtension(
     return Promise.reject(new Error(`Invalid extensionReference passed in: "${extensionIds}"`));
   }
 
-  return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(
-    extensionFolder => {
-      return session.defaultSession
-        .loadExtension(extensionFolder, loadExtensionOpts)
-        .then(ext => {
-          return Promise.resolve(ext.name);
-        })
-        .catch(err => {
-          console.error(`Failed to install extension: ${crxId}`);
-          console.error(err);
-          return Promise.reject(err);
-        });
-    },
-  );
+  return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(result => {
+    return session.defaultSession
+      .loadExtension(result.unzipPath as string, loadExtensionOpts)
+      .then(ext => {
+        return Promise.resolve(ext);
+      })
+      .catch(err => {
+        console.error(`Failed to install extension: ${crxId}`);
+        console.error(err);
+        return Promise.reject(err);
+      });
+  });
 }
 
 export default installExtension;

@@ -119,7 +119,7 @@ export const changePermissions = (dir: string, mode: string | number) => {
   });
 };
 
-function getPath() {
+export function getExtensionPath() {
   return path.join(app.getPath('userData'), 'extensions');
 }
 
@@ -127,53 +127,61 @@ function getPath() {
  * download chrome extension
  * @param extensionId extension id
  * @param options download extension options
- * @returns
  */
 export async function downloadExtension(
   extensionId: string,
   options?: DownloadOptions,
-): Promise<string> {
+): Promise<{ filePath: string; unzipPath?: string }> {
   const opts = Object.assign({ attempts: 5, unzip: true }, options);
   const attempts = opts.attempts || 5;
-  const outPath = opts.outPath || getPath();
+  const outPath = opts.outPath || getExtensionPath();
   const source = opts.source || 'chrome';
 
   mkdirp(outPath);
 
-  const extensionFolder = path.join(outPath, extensionId);
-  let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
-  if (['unpkg', 'jsdelivr'].includes(source) && EXTENSIONS.includes(extensionId)) {
-    fileUrl =
-      source === 'unpkg'
-        ? `https://unpkg.com/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`
-        : `https://cdn.jsdelivr.net/npm/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
-  }
+  const unzipPath = path.join(outPath, extensionId);
 
   return new Promise((resolve, reject) => {
-    const filePath = path.resolve(`${extensionFolder}.crx`);
+    const filePath = path.resolve(`${unzipPath}.crx`);
+    const unzipExtension = () => {
+      mkdirp(unzipPath, true);
+
+      unzip(filePath, unzipPath)
+        .then(() => {
+          changePermissions(unzipPath, 755);
+          return resolve({ filePath, unzipPath });
+        })
+        .catch((err: Error) => {
+          if (!fs.existsSync(path.resolve(unzipPath, 'manifest.json'))) {
+            return reject(err);
+          }
+        });
+    };
 
     if (fs.existsSync(filePath) && !opts.force) {
-      return resolve(filePath);
+      if (!fs.existsSync(unzipPath)) {
+        unzipExtension();
+        return;
+      }
+
+      return resolve({ filePath, unzipPath });
+    }
+
+    let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
+    if (['unpkg', 'jsdelivr'].includes(source) && EXTENSIONS.includes(extensionId)) {
+      fileUrl =
+        source === 'unpkg'
+          ? `https://unpkg.com/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`
+          : `https://cdn.jsdelivr.net/npm/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
     }
 
     downloadFile(fileUrl, filePath)
       .then(() => {
         if (!opts.unzip) {
-          return resolve(filePath);
+          return resolve({ filePath });
         }
 
-        mkdirp(extensionFolder, true);
-
-        unzip(filePath, extensionFolder)
-          .then(() => {
-            changePermissions(extensionFolder, 755);
-            resolve(extensionFolder);
-          })
-          .catch((err: Error) => {
-            if (!fs.existsSync(path.resolve(extensionFolder, 'manifest.json'))) {
-              return reject(err);
-            }
-          });
+        unzipExtension();
       })
       .catch(err => {
         console.log(`Failed to fetch extension, trying ${attempts - 1} more times`);
