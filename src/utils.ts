@@ -2,30 +2,41 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { app, net } from 'electron';
 import unzip from '@tomjs/unzip-crx';
+import { EXTENSIONS } from '.';
 
 /**
  * Download extension options
  */
 export interface DownloadOptions {
   /**
-   * Force to download the extension even if it's already installed, default is `false`
+   * Force to download the extension even if it's already installed
+   * @default false
    */
   force?: boolean;
 
   /**
-   * Whether to unzip the downloaded file, default is `true`
+   * Whether to unzip the downloaded file
+   * @default true
    */
   unzip?: boolean;
 
   /**
-   * Number of attempts to download the extension, default is `5`
+   * Number of attempts to download the extension
+   * @default 5
    */
   attempts?: number;
 
   /**
-   * the path to save the extension, default is `path.join(app.getPath('userData'), 'extensions')`
+   * The path to save the extension
+   * @default path.join(app.getPath('userData'), 'extensions')
    */
   outPath?: string;
+  /**
+   * Download source
+   * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
+   * @default 'chrome'
+   */
+  source?: 'chrome' | 'unpkg' | 'jsdelivr';
 }
 
 /**
@@ -125,13 +136,20 @@ export async function downloadExtension(
   const opts = Object.assign({ attempts: 5, unzip: true }, options);
   const attempts = opts.attempts || 5;
   const outPath = opts.outPath || getPath();
+  const source = opts.source || 'chrome';
 
   mkdirp(outPath);
 
   const extensionFolder = path.join(outPath, extensionId);
+  let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
+  if (['unpkg', 'jsdelivr'].includes(source) && EXTENSIONS.includes(extensionId)) {
+    fileUrl =
+      source === 'unpkg'
+        ? `https://unpkg.com/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`
+        : `https://cdn.jsdelivr.net/npm/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
+  }
 
   return new Promise((resolve, reject) => {
-    const fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
     const filePath = path.resolve(`${extensionFolder}.crx`);
 
     if (fs.existsSync(filePath) && !opts.force) {

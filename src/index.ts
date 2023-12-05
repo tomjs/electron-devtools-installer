@@ -6,7 +6,8 @@ export * from './utils';
 
 export interface InstallOptions {
   /**
-   * Force to download the extension even if it's already installed, default is `false`
+   * Force to download the extension even if it's already installed
+   * @default false
    */
   forceDownload?: boolean;
   /**
@@ -14,6 +15,12 @@ export interface InstallOptions {
    * @see https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options
    */
   loadExtensionOptions?: Electron.LoadExtensionOptions;
+  /**
+   * Download url source
+   * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
+   * @default "chrome"
+   */
+  source?: 'chrome' | 'unpkg' | 'jsdelivr';
 }
 
 /**
@@ -62,18 +69,20 @@ export async function installExtension(
     return Promise.reject(new Error(`Invalid extensionReference passed in: "${extensionIds}"`));
   }
 
-  return downloadExtension(crxId, { force: forceDownload }).then(extensionFolder => {
-    return session.defaultSession
-      .loadExtension(extensionFolder, loadExtensionOpts)
-      .then(ext => {
-        return Promise.resolve(ext.name);
-      })
-      .catch(err => {
-        console.error(`Failed to install extension: ${crxId}`);
-        console.error(err);
-        return Promise.reject(err);
-      });
-  });
+  return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(
+    extensionFolder => {
+      return session.defaultSession
+        .loadExtension(extensionFolder, loadExtensionOpts)
+        .then(ext => {
+          return Promise.resolve(ext.name);
+        })
+        .catch(err => {
+          console.error(`Failed to install extension: ${crxId}`);
+          console.error(err);
+          return Promise.reject(err);
+        });
+    },
+  );
 }
 
 export default installExtension;

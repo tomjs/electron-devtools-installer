@@ -43,3 +43,18 @@ export const REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
  * @see https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd
  */
 export const VUEJS_DEVTOOLS = 'nhdogjmejiglipccpnnnanhbledajbpd';
+
+/**
+ * All supported extensions
+ */
+export const EXTENSIONS = [
+  ANGULAR_DEVTOOLS,
+  APOLLO_CLIENT_TOOLS,
+  BACKBONE_DEBUGGER,
+  EMBER_INSPECTOR,
+  JQUERY_DEBUGGER,
+  MOBX_DEVTOOLS,
+  REACT_DEVELOPER_TOOLS,
+  REDUX_DEVTOOLS,
+  VUEJS_DEVTOOLS,
+];
