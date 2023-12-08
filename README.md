@@ -2,13 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/electron-devtools-installer)
 
+**English** | [中文](./README.zh_CN.md)
+
 > Install Chrome extension for Electron, Support `cjs`/`esm`
 
 This library is based on [Samuel Attard](https://github.com/MarshallOfSound)'s [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer) and [JonLuca De Caro](https://github.com/jonluca)'s [electron-extension-installer](https://github.com/JonLuca/electron-extension-installer), with some modifications and added small features. It provides support for `esm` and `cjs` to support for `Electron v28+`.
 
 For Chrome DevTools installation, please visit the [Official Documentation](https://www.electronjs.org/docs/latest/tutorial/devtools-extension).
-
-**English** | [中文](./README.zh_CN.md)
 
 ## Install
 

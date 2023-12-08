@@ -2,13 +2,13 @@
 
 [![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/electron-devtools-installer)
 
+[English](./README.md) | **中文**
+
 > 为 Electron 安装 Chrome 扩展，提供 `cjs`/`esm`
 
 本库是基于 [Samuel Attard](https://github.com/MarshallOfSound) 的 [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer) 和 [JonLuca De Caro](https://github.com/jonluca) 的 [electron-extension-installer](https://github.com/JonLuca/electron-extension-installer) 做了一些修改，并增加一些小功能。提供 `esm` 和 `cjs` 支持，以支持 `Electron v28+`。
 
 关于 `Chrome DevTools` 的安装，请参考[官方文档](https://www.electronjs.org/docs/latest/tutorial/devtools-extension)。
-
-[English](./README.md) | **中文**
 
 ## 安装
 
