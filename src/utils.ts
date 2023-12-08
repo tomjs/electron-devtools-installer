@@ -2,39 +2,39 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { app, net } from 'electron';
 import unzip from '@tomjs/unzip-crx';
-import { EXTENSIONS } from '.';
+import { EXTENSIONS } from './extensions';
 
 /**
  * Download extension options
  */
 export interface DownloadOptions {
   /**
-   * Force to download the extension even if it's already installed
+   * Force to download the extension even if it's already installed. Default is `false`
    * @default false
    */
   force?: boolean;
 
   /**
-   * Whether to unzip the downloaded file
+   * Whether to unzip the downloaded file. Default is `true`
    * @default true
    */
   unzip?: boolean;
 
   /**
-   * Number of attempts to download the extension
+   * Number of attempts to download the extension. Default is `5`
    * @default 5
    */
   attempts?: number;
 
   /**
-   * The path to save the extension
+   * The path to save the extension. Default is `path.join(app.getPath('userData'), 'extensions')`
    * @default path.join(app.getPath('userData'), 'extensions')
    */
   outPath?: string;
   /**
-   * Download source
+   * Download source. Default is `"chrome"`
    * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
-   * @default 'chrome'
+   * @default "chrome"
    */
   source?: 'chrome' | 'unpkg' | 'jsdelivr';
 }

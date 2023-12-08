@@ -1,6 +1,6 @@
 # @tomjs/electron-devtools-installer
 
-![npm](https://img.shields.io/npm/v/%40tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/%40tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/%40tomjs%2Felectron-devtools-installer)
+[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/electron-devtools-installer)
 
 > Install Chrome extension for Electron, Support `cjs`/`esm`
 
@@ -59,6 +59,11 @@ app.whenReady().then(() => {
     .catch(err => console.log('An error occurred: ', err));
 });
 ```
+
+## Documentation
+
+- [paka.dev](https://paka.dev) 提供的 [API文档](https://paka.dev/npm/@tomjs/electron-devtools-installer).
+- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts).
 
 ## API
 

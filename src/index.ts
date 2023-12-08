@@ -1,12 +1,15 @@
 import { session } from 'electron';
-import { downloadExtension } from './utils';
+import { downloadExtension, downloadFile } from './utils';
 
 export * from './extensions';
-export * from './utils';
+export { downloadExtension, downloadFile };
 
+/**
+ * Install extension options.
+ */
 export interface InstallOptions {
   /**
-   * Force to download the extension even if it's already installed
+   * Force to download the extension even if it's already installed. Default is `false`.
    * @default false
    */
   forceDownload?: boolean;
@@ -16,7 +19,7 @@ export interface InstallOptions {
    */
   loadExtensionOptions?: Electron.LoadExtensionOptions;
   /**
-   * Download url source
+   * Download url source. Default is `"chrome"`
    * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
    * @default "chrome"
    */
