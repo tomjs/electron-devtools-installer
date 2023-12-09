@@ -4,11 +4,16 @@
 
 [English](./README.md) | **中文**
 
-> 为 Electron 安装 Chrome 扩展，提供 `cjs`/`esm`
+> 为 [Electron](https://electronjs.org/zh) 安装 Chrome 扩展，提供 `cjs`/`esm`
 
 本库是基于 [Samuel Attard](https://github.com/MarshallOfSound) 的 [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer) 和 [JonLuca De Caro](https://github.com/jonluca) 的 [electron-extension-installer](https://github.com/JonLuca/electron-extension-installer) 做了一些修改，并增加一些小功能。提供 `esm` 和 `cjs` 支持，以支持 `Electron v28+`。
 
-关于 `Chrome DevTools` 的安装，请参考[官方文档](https://www.electronjs.org/docs/latest/tutorial/devtools-extension)。
+关于 `Chrome DevTools` 的安装，请参考[官方文档](https://www.electronjs.org/zh/docs/latest/tutorial/devtools-extension)。
+
+## Features
+
+- 支持 `cjs`/`esm`
+- 支持 `Electron v28+` 使用 `esm`
 
 ## 安装
 
