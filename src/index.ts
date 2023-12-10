@@ -62,9 +62,14 @@ export async function installExtension(
   }
 
   if (Array.isArray(extensionIds)) {
-    return Promise.all(extensionIds.map(id => installExtension(id, options))) as Promise<
-      Electron.Extension[]
-    >;
+    const exts: Electron.Extension[] = [];
+    for (let i = 0; i < extensionIds.length; i++) {
+      const id = extensionIds[i];
+      await installExtension(id, options).then(ext => {
+        exts.push(ext);
+      });
+    }
+    return exts;
   }
 
   let crxId: string;
