@@ -67,8 +67,8 @@ app.whenReady().then(() => {
 
 ## Documentation
 
-- [paka.dev](https://paka.dev) 提供的 [API文档](https://paka.dev/npm/@tomjs/electron-devtools-installer).
-- [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts).
+- [API Documentation](https://paka.dev/npm/@tomjs/electron-devtools-installer) provided by [paka.dev](https://paka.dev).
+- [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
 
 ## API
 
