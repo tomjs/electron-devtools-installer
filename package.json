@@ -50,31 +50,31 @@
     "prepublishOnly": "npm run build && np --any-branch --no-yarn --yolo --no-publish --message \"chore: release v%s\""
   },
   "dependencies": {
-    "@tomjs/unzip-crx": "^1.0.3"
+    "@tomjs/unzip-crx": "^1.1.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@jest/globals": "^29.7.0",
     "@kayahr/jest-electron-runner": "^29.10.0",
-    "@tomjs/commitlint": "^2.0.5",
-    "@tomjs/eslint": "^1.1.1",
-    "@tomjs/prettier": "^1.0.6",
-    "@tomjs/tsconfig": "^1.1.2",
+    "@tomjs/commitlint": "^2.1.1",
+    "@tomjs/eslint": "^1.2.1",
+    "@tomjs/prettier": "^1.1.1",
+    "@tomjs/tsconfig": "^1.2.1",
     "@types/jest": "^29.5.11",
     "@types/node": "^18.19.3",
     "electron": "^28.0.0",
-    "eslint": "^8.55.0",
+    "eslint": "^8.56.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
     "lint-staged": "^15.2.0",
     "np": "^9.2.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^3.1.0",
+    "prettier": "^3.1.1",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.1.1",
     "tsup": "^8.0.1",
-    "tsx": "^4.6.2",
-    "typescript": "~5.2.2"
+    "tsx": "^4.7.0",
+    "typescript": "~5.3.3"
   },
   "peerDependencies": {
     "electron": ">=12.0.0"
