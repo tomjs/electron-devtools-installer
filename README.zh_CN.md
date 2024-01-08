@@ -8,6 +8,8 @@
 
 本库是基于 [Samuel Attard](https://github.com/MarshallOfSound) 的 [electron-devtools-installer](https://github.com/MarshallOfSound/electron-devtools-installer) 和 [JonLuca De Caro](https://github.com/jonluca) 的 [electron-extension-installer](https://github.com/JonLuca/electron-extension-installer) 做了一些修改，并增加一些小功能。提供 `esm` 和 `cjs` 支持，以支持 `Electron v28+`。
 
+[预置](#preset-chrome-extensions-id) 的 `Chrome DevTools` 除了 [Chrome 应用商店](https://chromewebstore.google.com/) 可以选择 [npmmirror](https://npmmirror.com)、[jsdelivr](https://jsdelivr.net)、[unpkg](https://unpkg.com) 加速下载。相关的扩展由 [electron-devtools-files](https://github.com/tomjs/electron-devtools-files) 定时更新和发布。
+
 关于 `Chrome DevTools` 的安装，请参考[官方文档](https://www.electronjs.org/zh/docs/latest/tutorial/devtools-extension)。
 
 ## Features
@@ -109,10 +111,12 @@ app.whenReady().then(async () => {
 
 - **extensionIds**: `string | string[]` - Chrome 扩展 id
 - **options**: 安装可选配置
+
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - 强制下载已安装插件，默认值为 `false`
+  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
 
-返回 `Promise<Electron.Extension | Electron.Extension[]>` - 扩展名称/版本等
+  返回 `Promise<Electron.Extension | Electron.Extension[]>` - 扩展名称/版本等
 
 ### downloadExtension(extensionId[, options])
 
@@ -124,5 +128,12 @@ app.whenReady().then(async () => {
   - _unzip_: `boolean` - 是否解压下载的文件，默认为 `true`
   - _attempts_: `number` - 尝试下载扩展程序的次数，默认为 `5`
   - _outPath_: `string` - 保存下载扩展的路径，默认为 `path.join(app.getPath('userData'), 'extensions')`
+  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
 
 返回 `Promise<{ filePath: string; unzipPath?: string }>`
+
+## 测试/调试
+
+```bash
+pnpm jest --verbose false
+```

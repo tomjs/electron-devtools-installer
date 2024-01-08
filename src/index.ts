@@ -19,11 +19,11 @@ export interface InstallOptions {
    */
   loadExtensionOptions?: Electron.LoadExtensionOptions;
   /**
-   * Download url source. Default is `"chrome"`
+   * Download url source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `chrome`.
    * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
    * @default "chrome"
    */
-  source?: 'chrome' | 'unpkg' | 'jsdelivr';
+  source?: 'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror';
 }
 
 /**

@@ -6,6 +6,7 @@ import installExtension, {
   BACKBONE_DEBUGGER,
   downloadExtension,
   JQUERY_DEBUGGER,
+  MOBX_DEVTOOLS,
   VUEJS_DEVTOOLS,
 } from '../src';
 
@@ -72,6 +73,15 @@ describe('download chrome extension', () => {
     });
     expect(fs.existsSync(filePath)).toBe(true);
   });
+  it('download from "npmmirror" ', async () => {
+    const filePath = path.join(downloadPath, `${MOBX_DEVTOOLS}.crx`);
+    // MobX Developer Tools
+    await downloadExtension(MOBX_DEVTOOLS, {
+      outPath: downloadPath,
+      source: 'npmmirror',
+    });
+    expect(fs.existsSync(filePath)).toBe(true);
+  });
 });
 
 describe('install chrome extension', () => {
@@ -102,5 +112,13 @@ describe('install chrome extension', () => {
       source: 'jsdelivr',
     });
     expect(ext.name).toBe('Backbone Debugger');
+  });
+
+  it('install from "npmmirror" ', async () => {
+    // MobX Developer Tools
+    const ext = await installExtension(MOBX_DEVTOOLS, {
+      source: 'npmmirror',
+    });
+    expect(ext.name).toBe('MobX Developer Tools');
   });
 });

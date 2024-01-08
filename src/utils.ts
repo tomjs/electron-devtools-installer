@@ -32,11 +32,11 @@ export interface DownloadOptions {
    */
   outPath?: string;
   /**
-   * Download source. Default is `"chrome"`
+   * Download source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `chrome`.
    * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
    * @default "chrome"
    */
-  source?: 'chrome' | 'unpkg' | 'jsdelivr';
+  source?: 'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror';
 }
 
 /**
@@ -135,7 +135,9 @@ export async function downloadExtension(
   const opts = Object.assign({ attempts: 5, unzip: true }, options);
   const attempts = opts.attempts || 5;
   const outPath = opts.outPath || getExtensionPath();
-  const source = opts.source || 'chrome';
+  const source =
+    opts.source ||
+    (new Intl.NumberFormat().resolvedOptions().locale === 'zh-CN' ? 'npmmirror' : 'chrome');
 
   mkdirp(outPath);
 
@@ -168,11 +170,18 @@ export async function downloadExtension(
     }
 
     let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
-    if (['unpkg', 'jsdelivr'].includes(source) && EXTENSIONS.includes(extensionId)) {
-      fileUrl =
-        source === 'unpkg'
-          ? `https://unpkg.com/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`
-          : `https://cdn.jsdelivr.net/npm/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
+    if (['unpkg', 'jsdelivr', 'npmmirror'].includes(source) && EXTENSIONS.includes(extensionId)) {
+      switch (source) {
+        case 'npmmirror':
+          fileUrl = `https://registry.npmmirror.com/@tomjs/electron-devtools-files/latest/files/extensions/${extensionId}.crx`;
+          break;
+        case 'jsdelivr':
+          fileUrl = `https://cdn.jsdelivr.net/npm/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
+          break;
+        case 'unpkg':
+          fileUrl = `https://unpkg.com/@tomjs/electron-devtools-files/extensions/${extensionId}.crx`;
+          break;
+      }
     }
 
     downloadFile(fileUrl, filePath)
