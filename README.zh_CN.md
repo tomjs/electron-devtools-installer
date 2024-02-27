@@ -48,7 +48,7 @@ import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-insta
 // 安装 Vue.js DevTools
 app.whenReady().then(() => {
   installExtension(VUEJS_DEVTOOLS) // 等同于 installExtension("nhdogjmejiglipccpnnnanhbledajbpd")
-    .then(name => console.log(`Added Extension:  ${name}`))
+    .then(ext => console.log(`Added Extension:  ${ext.name}`))
     .catch(err => console.log('An error occurred: ', err));
 });
 ```
@@ -62,7 +62,7 @@ const { installExtension, VUEJS_DEVTOOLS } = require('@tomjs/electron-devtools-i
 // 安装 Vue.js DevTools
 app.whenReady().then(() => {
   installExtension(VUEJS_DEVTOOLS)
-    .then(name => console.log(`Added Extension:  ${name}`))
+    .then(ext => console.log(`Added Extension:  ${ext.name}`))
     .catch(err => console.log('An error occurred: ', err));
 });
 ```

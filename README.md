@@ -46,7 +46,7 @@ import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-insta
 // Install Vue.js DevTools
 app.whenReady().then(() => {
   installExtension(VUEJS_DEVTOOLS) // equals to installExtension("nhdogjmejiglipccpnnnanhbledajbpd")
-    .then(name => console.log(`Added Extension:  ${name}`))
+    .then(ext => console.log(`Added Extension:  ${ext.name}`))
     .catch(err => console.log('An error occurred: ', err));
 });
 ```
@@ -60,7 +60,7 @@ const { installExtension, VUEJS_DEVTOOLS } = require('@tomjs/electron-devtools-i
 // Install Vue.js DevTools
 app.whenReady().then(() => {
   installExtension(VUEJS_DEVTOOLS)
-    .then(name => console.log(`Added Extension:  ${name}`))
+    .then(ext => console.log(`Added Extension:  ${ext.name}`))
     .catch(err => console.log('An error occurred: ', err));
 });
 ```

@@ -82,9 +82,6 @@ export async function installExtension(
   return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(result => {
     return session.defaultSession
       .loadExtension(result.unzipPath as string, loadExtensionOpts)
-      .then(ext => {
-        return Promise.resolve(ext);
-      })
       .catch(err => {
         console.error(`Failed to install extension: ${crxId}`);
         console.error(err);
