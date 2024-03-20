@@ -25,7 +25,7 @@ export interface InstallOptions {
    */
   source?: 'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror';
   /**
-   * The target session on which the extension shall be installed
+   * The target session on which the extension shall be installed, default is `session.defaultSession`.
    */
   session?: string | Session;
 }

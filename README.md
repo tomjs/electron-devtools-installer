@@ -97,6 +97,7 @@ install chrome extension for electron
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - Force to download the extension even if it's already installed, default is `false`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - Download url source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `chrome`.
+  - _session_: `'string' | 'Electron.Session'` - The target session on which the extension shall be installed, default is `session.defaultSession`.
 
 Returns `Promise<Electron.Extension | Electron.Extension[]>` - extension name/version, etc.
 

@@ -115,6 +115,7 @@ app.whenReady().then(async () => {
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - 强制下载已安装插件，默认值为 `false`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
+  - _session_: `'string' | 'Electron.Session'` - 应安装扩展的目标会话，默认为 `session.defaultSession`。
 
   返回 `Promise<Electron.Extension | Electron.Extension[]>` - 扩展名称/版本等
 
