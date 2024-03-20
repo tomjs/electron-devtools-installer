@@ -1,4 +1,4 @@
-import { session } from 'electron';
+import { Session, session } from 'electron';
 import { downloadExtension, downloadFile } from './utils';
 
 export * from './extensions';
@@ -24,6 +24,10 @@ export interface InstallOptions {
    * @default "chrome"
    */
   source?: 'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror';
+  /**
+   * The target session on which the extension shall be installed
+   */
+  session?: string | Session;
 }
 
 /**
@@ -47,6 +51,11 @@ export async function installExtension(
 ): Promise<Electron.Extension | Electron.Extension[]> {
   const opts = Object.assign({}, options);
   const { loadExtensionOptions = {}, forceDownload } = opts;
+
+  const targetSession =
+    typeof opts.session === 'string'
+      ? session.fromPartition(opts.session)
+      : opts.session || session.defaultSession;
 
   const loadExtensionOpts = Object.assign(
     {
@@ -80,13 +89,11 @@ export async function installExtension(
   }
 
   return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(result => {
-    return session.defaultSession
-      .loadExtension(result.unzipPath as string, loadExtensionOpts)
-      .catch(err => {
-        console.error(`Failed to install extension: ${crxId}`);
-        console.error(err);
-        return Promise.reject(err);
-      });
+    return targetSession.loadExtension(result.unzipPath as string, loadExtensionOpts).catch(err => {
+      console.error(`Failed to install extension: ${crxId}`);
+      console.error(err);
+      return Promise.reject(err);
+    });
   });
 }
 
