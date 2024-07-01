@@ -1,6 +1,6 @@
 # @tomjs/electron-devtools-installer
 
-[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/electron-devtools-installer)
+[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://img.shields.io/badge/API-unpkg-orange)](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -67,7 +67,6 @@ app.whenReady().then(() => {
 
 ## Documentation
 
-- [API Documentation](https://paka.dev/npm/@tomjs/electron-devtools-installer) provided by [paka.dev](https://paka.dev).
 - [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
 
 ## API

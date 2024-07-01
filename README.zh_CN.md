@@ -1,6 +1,6 @@
 # @tomjs/electron-devtools-installer
 
-[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://www.paka.dev/badges/v0/cute.svg)](https://www.paka.dev/npm/@tomjs/electron-devtools-installer)
+[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://img.shields.io/badge/API-unpkg-orange)](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts)
 
 [English](./README.md) | **中文**
 
@@ -69,7 +69,6 @@ app.whenReady().then(() => {
 
 ## 文档
 
-- [paka.dev](https://paka.dev) 提供的 [API文档](https://paka.dev/npm/@tomjs/electron-devtools-installer).
 - [unpkg.com](https://www.unpkg.com/) 提供的 [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts).
 
 ## API
@@ -115,6 +114,7 @@ app.whenReady().then(async () => {
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - 强制下载已安装插件，默认值为 `false`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
+    - 非 `chrome` 是由 [electron-devtools-files](https://github.com/tomjs/electron-devtools-files) 提供的预置 Chrome 扩展。
   - _session_: `'string' | 'Electron.Session'` - 应安装扩展的目标会话，默认为 `session.defaultSession`。
 
   返回 `Promise<Electron.Extension | Electron.Extension[]>` - 扩展名称/版本等
@@ -130,6 +130,7 @@ app.whenReady().then(async () => {
   - _attempts_: `number` - 尝试下载扩展程序的次数，默认为 `5`
   - _outPath_: `string` - 保存下载扩展的路径，默认为 `path.join(app.getPath('userData'), 'extensions')`
   - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
+    - 非 `chrome` 是由 [electron-devtools-files](https://github.com/tomjs/electron-devtools-files) 提供的预置 Chrome 扩展。
 
 返回 `Promise<{ filePath: string; unzipPath?: string }>`
 
