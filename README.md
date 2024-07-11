@@ -1,6 +1,6 @@
 # @tomjs/electron-devtools-installer
 
-[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://img.shields.io/badge/API-unpkg-orange)](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts)
+[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@tomjs/electron-devtools-installer)
 
 **English** | [中文](./README.zh_CN.md)
 
@@ -67,6 +67,7 @@ app.whenReady().then(() => {
 
 ## Documentation
 
+- [API Document](https://www.jsdocs.io/package/@tomjs/electron-devtools-installer) provided by [jsdocs.io](https://www.jsdocs.io).
 - [index.d.ts](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts) provided by [unpkg.com](https://www.unpkg.com).
 
 ## API
