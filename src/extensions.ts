@@ -43,6 +43,11 @@ export const REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
  * @see https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd
  */
 export const VUEJS_DEVTOOLS = 'nhdogjmejiglipccpnnnanhbledajbpd';
+/**
+ * Vue.js devtools (beta)
+ * @see https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg
+ */
+export const VUEJS_DEVTOOLS_BETA = 'ljjemllljcmogpfapbkkighbhhppjdbg';
 
 /**
  * All supported extensions
@@ -57,4 +62,5 @@ export const EXTENSIONS = [
   REACT_DEVELOPER_TOOLS,
   REDUX_DEVTOOLS,
   VUEJS_DEVTOOLS,
+  VUEJS_DEVTOOLS_BETA,
 ];

@@ -88,6 +88,7 @@ app.whenReady().then(() => {
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
+| `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) | [详情](https://www.crxsoso.com/webstore/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
 
 **注意**
 

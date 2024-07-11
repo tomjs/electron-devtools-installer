@@ -50,7 +50,7 @@
     "prepublishOnly": "pnpm build"
   },
   "dependencies": {
-    "@tomjs/unzip-crx": "^1.1.0"
+    "@tomjs/unzip-crx": "^1.1.2"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

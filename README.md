@@ -86,6 +86,7 @@ The following is a list of preset Chrome extensions ID:
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
+| `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
 
 ### installExtension(extensionIds[, options])
 

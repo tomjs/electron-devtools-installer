@@ -8,6 +8,7 @@ import installExtension, {
   JQUERY_DEBUGGER,
   MOBX_DEVTOOLS,
   VUEJS_DEVTOOLS,
+  VUEJS_DEVTOOLS_BETA,
 } from '../src';
 
 function mkdirp(dir: string) {
@@ -46,9 +47,9 @@ describe('download chrome extension', () => {
   });
 
   it('download by crx name', async () => {
-    const filePath = path.join(downloadPath, `${VUEJS_DEVTOOLS}.crx`);
+    const filePath = path.join(downloadPath, `${VUEJS_DEVTOOLS_BETA}.crx`);
     // Vue.js devtools
-    await downloadExtension(VUEJS_DEVTOOLS, {
+    await downloadExtension(VUEJS_DEVTOOLS_BETA, {
       outPath: downloadPath,
     });
     expect(fs.existsSync(filePath)).toBe(true);
