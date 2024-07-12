@@ -33,14 +33,19 @@ export interface InstallOptions {
 
 /**
  * Install Chrome extension for Electron
- * @param extensionIds Extension id or ids
+ * @param extensionId Extension id
  * @param options Install options
  */
 export async function installExtension(
-  extensionIds: string,
+  extensionId: string,
   options?: InstallOptions,
 ): Promise<Electron.Extension>;
 
+/**
+ * Install Chrome extensions for Electron
+ * @param extensionIds Extension ids
+ * @param options Install options
+ */
 export async function installExtension(
   extensionIds: string[],
   options?: InstallOptions,
