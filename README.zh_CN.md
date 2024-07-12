@@ -1,6 +1,6 @@
 # @tomjs/electron-devtools-installer
 
-[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![Docs](https://img.shields.io/badge/API-unpkg-orange)](https://www.unpkg.com/browse/@tomjs/electron-devtools-installer/dist/index.d.ts)
+[![npm](https://img.shields.io/npm/v/@tomjs/electron-devtools-installer)](https://www.npmjs.com/package/@tomjs/electron-devtools-installer) ![node-current (scoped)](https://img.shields.io/node/v/@tomjs/electron-devtools-installer) ![NPM](https://img.shields.io/npm/l/@tomjs/electron-devtools-installer) [![jsDocs.io](https://img.shields.io/badge/jsDocs.io-reference-blue)](https://www.jsdocs.io/package/@tomjs/electron-devtools-installer)
 
 [English](./README.md) | **中文**
 
@@ -19,22 +19,15 @@
 
 ## 安装
 
-使用 `pnpm`
-
 ```bash
+# pnpm
 pnpm add @tomjs/electron-devtools-installer
-```
 
-使用 `yarn`
-
-```bash
+# yarn
 yarn add @tomjs/electron-devtools-installer
-```
 
-使用 `npm`
-
-```bash
-npm i @tomjs/electron-devtools-installer
+# npm
+npm add @tomjs/electron-devtools-installer
 ```
 
 ## 使用

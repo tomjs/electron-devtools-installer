@@ -17,22 +17,15 @@ For Chrome DevTools installation, please visit the [Official Documentation](http
 
 ## Install
 
-With `pnpm`
-
 ```bash
+# pnpm
 pnpm add @tomjs/electron-devtools-installer
-```
 
-With `yarn`
-
-```bash
+# yarn
 yarn add @tomjs/electron-devtools-installer
-```
 
-With `npm`
-
-```bash
-npm i @tomjs/electron-devtools-installer
+# npm
+npm add @tomjs/electron-devtools-installer
 ```
 
 ## Usage
