@@ -1,4 +1,5 @@
-import { Session, session } from 'electron';
+import type { Session } from 'electron';
+import { session } from 'electron';
 import { downloadExtension, downloadFile } from './utils';
 
 export * from './extensions';

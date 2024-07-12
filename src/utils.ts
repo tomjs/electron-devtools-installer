@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { app, net } from 'electron';
 import unzip from '@tomjs/unzip-crx';
+import { app, net } from 'electron';
 import { EXTENSIONS } from './extensions';
 
 /**
