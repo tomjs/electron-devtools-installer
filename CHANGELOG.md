@@ -1,3 +1,7 @@
+## [2.4.0](https://github.com/tomjs/electron-devtools-installer/compare/v2.3.2...v2.4.0) (2024-10-31)
+
+- feat: add legacy vue devtools and preact developer tools [d12012a](https://github.com/tomjs/electron-devtools-installer/commit/d12012a)
+
 ## [2.3.2](https://github.com/tomjs/electron-devtools-installer/compare/v2.3.1...v2.3.2) (2024-07-12)
 
 - chore: add different comments to installExtension [0d9f9fb](https://github.com/tomjs/electron-devtools-installer/commit/0d9f9fb)
