@@ -77,10 +77,13 @@ The following is a list of preset Chrome extensions ID:
 | `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) |
 | `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
 | `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
+| `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 | `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
+| `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
+| `VUEJS_DEVTOOLS_V6` | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp) |
 
 ### installExtension(extensionIds[, options])
 

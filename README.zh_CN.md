@@ -79,10 +79,13 @@ app.whenReady().then(() => {
 | `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) | [详情](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
 | `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) | [详情](https://www.crxsoso.com/webstore/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
 | `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) | [详情](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
+| `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) | [详情](https://www.crxsoso.com/webstore/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 | `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) | [详情](https://www.crxsoso.com/webstore/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
+| `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) | [详情](https://www.crxsoso.com/webstore/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
+| `VUEJS_DEVTOOLS_V6` | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp) | [详情](https://www.crxsoso.com/webstore/detail/iaajmlceplecbljialhhkmedjlpdblhp) |
 
 **注意**
 

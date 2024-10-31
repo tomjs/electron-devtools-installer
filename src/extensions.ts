@@ -29,6 +29,11 @@ export const JQUERY_DEBUGGER = 'dbhhnnnpaeobfddmlalhnehgclcmjimi';
  */
 export const MOBX_DEVTOOLS = 'pfgnfdagidkfgccljigdamigbcnndkod';
 /**
+ * Preact Developer Tools
+ * @see https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd
+ */
+export const PREACT_DEVELOPER_TOOLS = 'ilcajpmogmhpliinlbcdebhbcanbghmd';
+/**
  * React Developer Tools
  * @see https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi
  */
@@ -48,6 +53,16 @@ export const VUEJS_DEVTOOLS = 'nhdogjmejiglipccpnnnanhbledajbpd';
  * @see https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg
  */
 export const VUEJS_DEVTOOLS_BETA = 'ljjemllljcmogpfapbkkighbhhppjdbg';
+/**
+ * Vue.js devtools (v5)
+ * @see https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo
+ */
+export const VUEJS_DEVTOOLS_V5 = 'hkddcnbhifppgmfgflgaelippbigjpjo';
+/**
+ * Vue.js devtools (v6)
+ * @see https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp
+ */
+export const VUEJS_DEVTOOLS_V6 = 'iaajmlceplecbljialhhkmedjlpdblhp';
 
 /**
  * All supported extensions
@@ -59,8 +74,11 @@ export const EXTENSIONS = [
   EMBER_INSPECTOR,
   JQUERY_DEBUGGER,
   MOBX_DEVTOOLS,
+  PREACT_DEVELOPER_TOOLS,
   REACT_DEVELOPER_TOOLS,
   REDUX_DEVTOOLS,
   VUEJS_DEVTOOLS,
   VUEJS_DEVTOOLS_BETA,
+  VUEJS_DEVTOOLS_V5,
+  VUEJS_DEVTOOLS_V6,
 ];
