@@ -169,7 +169,7 @@ export async function downloadExtension(
       return resolve({ filePath, unzipPath });
     }
 
-    let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&acceptformat=crx2,crx3&x=id%3D${extensionId}%26uc&prodversion=32`;
+    let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=135.0.0.0&x=id%3D${extensionId}%26installsource%3Dondemand%26uc&nacl_arch=x86-64&acceptformat=crx2,crx3`;
     if (['unpkg', 'jsdelivr', 'npmmirror'].includes(source) && EXTENSIONS.includes(extensionId)) {
       switch (source) {
         case 'npmmirror':

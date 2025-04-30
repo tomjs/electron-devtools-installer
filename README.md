@@ -80,7 +80,7 @@ The following is a list of preset Chrome extensions ID:
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
 | `SOLID_DEVTOOLS` | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
-| `SVELTE_DEVTOOLS` | [Svelte Devtools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
+| `SVELTE_DEVTOOLS` | [Svelte DevTools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 | `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
 | `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |

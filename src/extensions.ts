@@ -44,7 +44,7 @@ export const REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
  */
 export const SOLID_DEVTOOLS = 'kmcfjchnmmaeeagadbhoofajiopoceel';
 /**
- * Svelte Devtools
+ * Svelte DevTools
  * @see https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff
  */
 export const SVELTE_DEVTOOLS = 'kfidecgcdjjfpeckbblhmfkhmlgecoff';

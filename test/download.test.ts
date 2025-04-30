@@ -5,8 +5,8 @@ import { app } from 'electron';
 import installExtension, {
   BACKBONE_DEBUGGER,
   downloadExtension,
-  JQUERY_DEBUGGER,
   MOBX_DEVTOOLS,
+  SVELTE_DEVTOOLS,
   VUEJS_DEVTOOLS,
   VUEJS_DEVTOOLS_BETA,
 } from '../src';
@@ -56,9 +56,9 @@ describe('download chrome extension', () => {
   });
 
   it('download from "unpkg" ', async () => {
-    const filePath = path.join(downloadPath, `${JQUERY_DEBUGGER}.crx`);
+    const filePath = path.join(downloadPath, `${SVELTE_DEVTOOLS}.crx`);
     // jQuery Debugger
-    await downloadExtension(JQUERY_DEBUGGER, {
+    await downloadExtension(SVELTE_DEVTOOLS, {
       outPath: downloadPath,
       source: 'unpkg',
     });
@@ -101,10 +101,10 @@ describe('install chrome extension', () => {
 
   it('install from "unpkg" ', async () => {
     // jQuery Debugger
-    const ext = await installExtension(JQUERY_DEBUGGER, {
+    const ext = await installExtension(SVELTE_DEVTOOLS, {
       source: 'unpkg',
     });
-    expect(ext.name).toBe('jQuery Debugger');
+    expect(ext.name).toBe('Svelte DevTools');
   });
 
   it('install from "jsdelivr" ', async () => {
