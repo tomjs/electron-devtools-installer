@@ -19,11 +19,6 @@ export const BACKBONE_DEBUGGER = 'bhljhndlimiafopmmhjlgfpnnchjjbhd';
  */
 export const EMBER_INSPECTOR = 'bmdblncegkenkacieihfhpjfppoconhi';
 /**
- * jQuery Debugger
- * @see https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi
- */
-export const JQUERY_DEBUGGER = 'dbhhnnnpaeobfddmlalhnehgclcmjimi';
-/**
  * MobX Developer Tools
  * @see https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod
  */
@@ -43,6 +38,16 @@ export const REACT_DEVELOPER_TOOLS = 'fmkadmapgofadopljbjfkapdkoienihi';
  * @see https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd
  */
 export const REDUX_DEVTOOLS = 'lmhkpmbekcpmknklioeibfkpmmfibljd';
+/**
+ * Solid Devtools
+ * @see https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel
+ */
+export const SOLID_DEVTOOLS = 'kmcfjchnmmaeeagadbhoofajiopoceel';
+/**
+ * Svelte Devtools
+ * @see https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff
+ */
+export const SVELTE_DEVTOOLS = 'kfidecgcdjjfpeckbblhmfkhmlgecoff';
 /**
  * Vue.js devtools
  * @see https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd
@@ -72,11 +77,12 @@ export const EXTENSIONS = [
   APOLLO_CLIENT_TOOLS,
   BACKBONE_DEBUGGER,
   EMBER_INSPECTOR,
-  JQUERY_DEBUGGER,
   MOBX_DEVTOOLS,
   PREACT_DEVELOPER_TOOLS,
   REACT_DEVELOPER_TOOLS,
   REDUX_DEVTOOLS,
+  SOLID_DEVTOOLS,
+  SVELTE_DEVTOOLS,
   VUEJS_DEVTOOLS,
   VUEJS_DEVTOOLS_BETA,
   VUEJS_DEVTOOLS_V5,

@@ -77,11 +77,12 @@ app.whenReady().then(() => {
 | `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) | [详情](https://www.crxsoso.com/webstore/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
 | `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) | [详情](https://www.crxsoso.com/webstore/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
 | `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) | [详情](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
-| `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) | [详情](https://www.crxsoso.com/webstore/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
 | `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) | [详情](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
 | `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) | [详情](https://www.crxsoso.com/webstore/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
+| `SOLID_DEVTOOLS` | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel) | [详情](https://www.crxsoso.com/webstore/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
+| `SVELTE_DEVTOOLS` | [Svelte Devtools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) | [详情](https://www.crxsoso.com/webstore/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 | `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) | [详情](https://www.crxsoso.com/webstore/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
 | `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) | [详情](https://www.crxsoso.com/webstore/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |

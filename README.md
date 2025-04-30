@@ -75,11 +75,12 @@ The following is a list of preset Chrome extensions ID:
 | `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
 | `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
 | `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) |
-| `JQUERY_DEBUGGER` | [jQuery Debugger](https://chromewebstore.google.com/detail/dbhhnnnpaeobfddmlalhnehgclcmjimi) |
 | `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
 | `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
 | `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) |
 | `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
+| `SOLID_DEVTOOLS` | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
+| `SVELTE_DEVTOOLS` | [Svelte Devtools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
 | `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
 | `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
 | `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
