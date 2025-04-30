@@ -1,3 +1,7 @@
+## [3.0.1](https://github.com/tomjs/electron-devtools-installer/compare/v3.0.0...v3.0.1) (2025-04-30)
+
+- fix: unable to download ctx normally [365c7c6](https://github.com/tomjs/electron-devtools-installer/commit/365c7c6)
+
 ## [3.0.0](https://github.com/tomjs/electron-devtools-installer/compare/v2.4.0...v3.0.0) (2025-04-30)
 
 - feat: remove jQuery and add Solid/Svelte [b60d716](https://github.com/tomjs/electron-devtools-installer/commit/b60d716)
