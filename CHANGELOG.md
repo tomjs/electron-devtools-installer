@@ -1,3 +1,7 @@
+## [3.0.0](https://github.com/tomjs/electron-devtools-installer/compare/v2.4.0...v3.0.0) (2025-04-30)
+
+- feat: remove jQuery and add Solid/Svelte [b60d716](https://github.com/tomjs/electron-devtools-installer/commit/b60d716)
+
 ## [2.4.0](https://github.com/tomjs/electron-devtools-installer/compare/v2.3.2...v2.4.0) (2024-10-31)
 
 - feat: add legacy vue devtools and preact developer tools [d12012a](https://github.com/tomjs/electron-devtools-installer/commit/d12012a)
