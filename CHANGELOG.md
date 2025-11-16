@@ -1,3 +1,8 @@
+## [4.0.0](https://github.com/tomjs/electron-devtools-installer/compare/v3.0.1...v4.0.0) (2025-11-16)
+
+- feat: support session.extensions  [15f28a8](https://github.com/tomjs/electron-devtools-installer/commit/15f28a8)
+- feat: change default  source to unpkg and change tsup to tsdown  [8989228](https://github.com/tomjs/electron-devtools-installer/commit/8989228)
+
 ## [3.0.1](https://github.com/tomjs/electron-devtools-installer/compare/v3.0.0...v3.0.1) (2025-04-30)
 
 - fix: unable to download ctx normally [365c7c6](https://github.com/tomjs/electron-devtools-installer/commit/365c7c6)
