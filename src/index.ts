@@ -97,12 +97,14 @@ export async function installExtension(
 
   return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then((result) => {
     // @ts-ignore
-    const loadExtension = targetSession.extensions ? targetSession.extensions.loadExtension : targetSession.loadExtension;
-    return loadExtension(result.unzipPath as string, loadExtensionOpts).catch((err) => {
-      console.error(`Failed to install extension: ${crxId}`);
-      console.error(err);
-      return Promise.reject(err);
-    });
+    return targetSession.extensions
+    // @ts-ignore
+      ? targetSession.extensions.loadExtension(result.unzipPath as string, loadExtensionOpts)
+      : targetSession.loadExtension(result.unzipPath as string, loadExtensionOpts).catch((err) => {
+          console.error(`Failed to install extension: ${crxId}`);
+          console.error(err);
+          return Promise.reject(err);
+        });
   });
 }
 
