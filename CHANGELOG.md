@@ -1,3 +1,7 @@
+## [4.0.1](https://github.com/tomjs/electron-devtools-installer/compare/v4.0.0...v4.0.1) (2025-11-16)
+
+- fix:  Function must be called on an object of type Session  [cdab41f](https://github.com/tomjs/electron-devtools-installer/commit/cdab41f)
+
 ## [4.0.0](https://github.com/tomjs/electron-devtools-installer/compare/v3.0.1...v4.0.0) (2025-11-16)
 
 - feat: support session.extensions  [15f28a8](https://github.com/tomjs/electron-devtools-installer/commit/15f28a8)
