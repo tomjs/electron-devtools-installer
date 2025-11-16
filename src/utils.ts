@@ -1,4 +1,5 @@
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import unzip from '@tomjs/unzip-crx';
 import { app, net } from 'electron';
@@ -32,7 +33,7 @@ export interface DownloadOptions {
    */
   outPath?: string;
   /**
-   * Download source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `chrome`.
+   * Download source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `unpkg`.
    * @see https://www.npmjs.com/package/@tomjs/electron-devtools-files
    * @default "chrome"
    */
@@ -69,13 +70,12 @@ function rmSync(path: string) {
  * download file from network
  * @param url url address to download
  * @param filePath file path to save
- * @returns
  */
-export const downloadFile = (url: string, filePath: string) => {
+export function downloadFile(url: string, filePath: string) {
   return new Promise<void>((resolve, reject) => {
     const request = net.request(url);
 
-    request.on('response', response => {
+    request.on('response', (response) => {
       if (response.statusCode !== 200) {
         reject(new Error(`File download failed, status code: ${response.statusCode}`));
         return;
@@ -89,7 +89,7 @@ export const downloadFile = (url: string, filePath: string) => {
         resolve();
       });
 
-      fileStream.on('error', err => {
+      fileStream.on('error', (err) => {
         fs.unlink(filePath, () => reject(err));
       });
 
@@ -101,23 +101,23 @@ export const downloadFile = (url: string, filePath: string) => {
     request.on('error', reject);
     request.end();
   });
-};
+}
 
 /**
  * change permissions of all files in directory
  * @param dir directory path
  * @param mode permissions mode
  */
-export const changePermissions = (dir: string, mode: string | number) => {
+export function changePermissions(dir: string, mode: string | number) {
   const files = fs.readdirSync(dir);
-  files.forEach(file => {
+  files.forEach((file) => {
     const filePath = path.join(dir, file);
-    fs.chmodSync(filePath, parseInt(`${mode}`, 8));
+    fs.chmodSync(filePath, Number.parseInt(`${mode}`, 8));
     if (fs.statSync(filePath).isDirectory()) {
       changePermissions(filePath, mode);
     }
   });
-};
+}
 
 export function getExtensionPath() {
   return path.join(app.getPath('userData'), 'extensions');
@@ -135,9 +135,9 @@ export async function downloadExtension(
   const opts = Object.assign({ attempts: 5, unzip: true }, options);
   const attempts = opts.attempts || 5;
   const outPath = opts.outPath || getExtensionPath();
-  const source =
-    opts.source ||
-    (new Intl.NumberFormat().resolvedOptions().locale === 'zh-CN' ? 'npmmirror' : 'chrome');
+  const source
+    = opts.source
+      || (new Intl.NumberFormat().resolvedOptions().locale === 'zh-CN' ? 'npmmirror' : 'unpkg');
 
   mkdirp(outPath);
 
@@ -169,7 +169,7 @@ export async function downloadExtension(
       return resolve({ filePath, unzipPath });
     }
 
-    let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=135.0.0.0&x=id%3D${extensionId}%26installsource%3Dondemand%26uc&nacl_arch=x86-64&acceptformat=crx2,crx3`;
+    let fileUrl = `https://clients2.google.com/service/update2/crx?response=redirect&prodversion=135.0.0.0&x=id%3D${extensionId}%26installsource%3Dondemand%26uc&nacl_arch=${os.arch() === 'arm64' ? 'arm64' : 'x86-64'}&acceptformat=crx2,crx3`;
     if (['unpkg', 'jsdelivr', 'npmmirror'].includes(source) && EXTENSIONS.includes(extensionId)) {
       switch (source) {
         case 'npmmirror':
@@ -192,7 +192,7 @@ export async function downloadExtension(
 
         unzipExtension();
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(`Failed to fetch extension, trying ${attempts - 1} more times`);
         if (attempts <= 1) {
           return reject(err);

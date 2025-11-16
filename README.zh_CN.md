@@ -35,8 +35,8 @@ npm add @tomjs/electron-devtools-installer
 - **esm**
 
 ```js
-import { app } from 'electron';
 import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-installer';
+import { app } from 'electron';
 
 // 安装 Vue.js DevTools
 app.whenReady().then(() => {
@@ -49,8 +49,8 @@ app.whenReady().then(() => {
 - **cjs**
 
 ```js
-const { app } = require('electron');
 const { installExtension, VUEJS_DEVTOOLS } = require('@tomjs/electron-devtools-installer');
+const { app } = require('electron');
 
 // 安装 Vue.js DevTools
 app.whenReady().then(() => {
@@ -71,31 +71,31 @@ app.whenReady().then(() => {
 
 以下是预设的Chrome扩展ID列表：
 
-| ID | Name | 第三方 |
-| --- | --- | --- |
-| `ANGULAR_DEVTOOLS` | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh) | [详情](https://www.crxsoso.com/webstore/detail/ienfalfjdbdpebioblfackkekamfmbnh) |
-| `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) | [详情](https://www.crxsoso.com/webstore/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
-| `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) | [详情](https://www.crxsoso.com/webstore/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
-| `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) | [详情](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
-| `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) | [详情](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
+| ID                       | Name                                                                                                | 第三方                                                                           |
+| ------------------------ | --------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `ANGULAR_DEVTOOLS`       | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh)       | [详情](https://www.crxsoso.com/webstore/detail/ienfalfjdbdpebioblfackkekamfmbnh) |
+| `APOLLO_CLIENT_TOOLS`    | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) | [详情](https://www.crxsoso.com/webstore/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
+| `BACKBONE_DEBUGGER`      | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd)      | [详情](https://www.crxsoso.com/webstore/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
+| `EMBER_INSPECTOR`        | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi)        | [详情](https://www.crxsoso.com/webstore/detail/bmdblncegkenkacieihfhpjfppoconhi) |
+| `MOBX_DEVTOOLS`          | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod)          | [详情](https://www.crxsoso.com/webstore/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
 | `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) | [详情](https://www.crxsoso.com/webstore/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
-| `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
-| `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
-| `SOLID_DEVTOOLS` | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel) | [详情](https://www.crxsoso.com/webstore/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
-| `SVELTE_DEVTOOLS` | [Svelte DevTools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) | [详情](https://www.crxsoso.com/webstore/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
-| `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
-| `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) | [详情](https://www.crxsoso.com/webstore/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
-| `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) | [详情](https://www.crxsoso.com/webstore/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
-| `VUEJS_DEVTOOLS_V6` | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp) | [详情](https://www.crxsoso.com/webstore/detail/iaajmlceplecbljialhhkmedjlpdblhp) |
+| `REACT_DEVELOPER_TOOLS`  | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi)  | [详情](https://www.crxsoso.com/webstore/detail/fmkadmapgofadopljbjfkapdkoienihi) |
+| `REDUX_DEVTOOLS`         | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd)         | [详情](https://www.crxsoso.com/webstore/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
+| `SOLID_DEVTOOLS`         | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel)         | [详情](https://www.crxsoso.com/webstore/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
+| `SVELTE_DEVTOOLS`        | [Svelte DevTools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff)        | [详情](https://www.crxsoso.com/webstore/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
+| `VUEJS_DEVTOOLS`         | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd)        | [详情](https://www.crxsoso.com/webstore/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
+| `VUEJS_DEVTOOLS_BETA`    | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) | [详情](https://www.crxsoso.com/webstore/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
+| `VUEJS_DEVTOOLS_V5`      | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo)   | [详情](https://www.crxsoso.com/webstore/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
+| `VUEJS_DEVTOOLS_V6`      | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp)   | [详情](https://www.crxsoso.com/webstore/detail/iaajmlceplecbljialhhkmedjlpdblhp) |
 
 **注意**
 
 如果无法访问 [Chrome应用商店](https://chromewebstore.google.com/) 或者使用指定版本插件，可以通过一些第三方网站（[Crx搜搜](https://www.crxsoso.com/)、[CrxDL](https://crxdl.com/)）下载 `.crx` 文件后，改名后缀名为 `.zip`，使用压缩工具（[360压缩](https://yasuo.360.cn/)）解压，调用 [Electron](https://www.electronjs.org/docs/latest/tutorial/devtools-extension) 的 `session.defaultSession.loadExtension` 方法安装。
 
 ```js
-const { app, session } = require('electron');
-const path = require('node:path');
 const os = require('node:os');
+const path = require('node:path');
+const { app, session } = require('electron');
 
 const reactDevToolsPath = 'crx扩展解压路径';
 app.whenReady().then(async () => {
@@ -109,10 +109,9 @@ app.whenReady().then(async () => {
 
 - **extensionIds**: `string | string[]` - Chrome 扩展 id
 - **options**: 安装可选配置
-
   - _loadExtensionOptions_: [session.LoadExtensionOptions](https://www.electronjs.org/docs/latest/api/session#sesloadextensionpath-options)
   - _forceDownload_: `boolean` - 强制下载已安装插件，默认值为 `false`
-  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `chrome` 。
+  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - 下载地址源。当操作系统语言为` zh_CN` 时，默认值为 `npmmirror` ，否则为 `unpkg` 。
     - 非 `chrome` 是由 [electron-devtools-files](https://github.com/tomjs/electron-devtools-files) 提供的预置 Chrome 扩展。
   - _session_: `'string' | 'Electron.Session'` - 应安装扩展的目标会话，默认为 `session.defaultSession`。
 

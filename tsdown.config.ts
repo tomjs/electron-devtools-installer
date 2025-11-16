@@ -1,4 +1,4 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 import pkg from './package.json';
 
 export default defineConfig({
@@ -8,5 +8,5 @@ export default defineConfig({
   external: ['electron'].concat(Object.keys(pkg.dependencies)),
   clean: true,
   dts: true,
-  splitting: true,
+  publint: true,
 });

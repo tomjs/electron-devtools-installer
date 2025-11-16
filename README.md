@@ -33,8 +33,8 @@ npm add @tomjs/electron-devtools-installer
 - **esm**
 
 ```js
-import { app } from 'electron';
 import { installExtension, VUEJS_DEVTOOLS } from '@tomjs/electron-devtools-installer';
+import { app } from 'electron';
 
 // Install Vue.js DevTools
 app.whenReady().then(() => {
@@ -47,8 +47,8 @@ app.whenReady().then(() => {
 - **cjs**
 
 ```js
-const { app } = require('electron');
 const { installExtension, VUEJS_DEVTOOLS } = require('@tomjs/electron-devtools-installer');
+const { app } = require('electron');
 
 // Install Vue.js DevTools
 app.whenReady().then(() => {
@@ -69,22 +69,22 @@ app.whenReady().then(() => {
 
 The following is a list of preset Chrome extensions ID:
 
-| ID | Name |
-| --- | --- |
-| `ANGULAR_DEVTOOLS` | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh) |
-| `APOLLO_CLIENT_TOOLS` | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
-| `BACKBONE_DEBUGGER` | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd) |
-| `EMBER_INSPECTOR` | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi) |
-| `MOBX_DEVTOOLS` | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod) |
+| ID                       | Name                                                                                                |
+| ------------------------ | --------------------------------------------------------------------------------------------------- |
+| `ANGULAR_DEVTOOLS`       | [Angular DevTools](https://chromewebstore.google.com/detail/ienfalfjdbdpebioblfackkekamfmbnh)       |
+| `APOLLO_CLIENT_TOOLS`    | [Apollo Client Devtools](https://chromewebstore.google.com/detail/jdkknkkbebbapilgoeccciglkfbmbnfm) |
+| `BACKBONE_DEBUGGER`      | [Backbone Debugger](https://chromewebstore.google.com/detail/bhljhndlimiafopmmhjlgfpnnchjjbhd)      |
+| `EMBER_INSPECTOR`        | [Ember Inspector](https://chromewebstore.google.com/detail/bmdblncegkenkacieihfhpjfppoconhi)        |
+| `MOBX_DEVTOOLS`          | [MobX DevTools](https://chromewebstore.google.com/detail/pfgnfdagidkfgccljigdamigbcnndkod)          |
 | `PREACT_DEVELOPER_TOOLS` | [Preact Developer Tools](https://chromewebstore.google.com/detail/ilcajpmogmhpliinlbcdebhbcanbghmd) |
-| `REACT_DEVELOPER_TOOLS` | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi) |
-| `REDUX_DEVTOOLS` | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd) |
-| `SOLID_DEVTOOLS` | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel) |
-| `SVELTE_DEVTOOLS` | [Svelte DevTools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff) |
-| `VUEJS_DEVTOOLS` | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd) |
-| `VUEJS_DEVTOOLS_BETA` | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
-| `VUEJS_DEVTOOLS_V5` | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo) |
-| `VUEJS_DEVTOOLS_V6` | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp) |
+| `REACT_DEVELOPER_TOOLS`  | [React Developer Tools](https://chromewebstore.google.com/detail/fmkadmapgofadopljbjfkapdkoienihi)  |
+| `REDUX_DEVTOOLS`         | [Redux DevTools](https://chromewebstore.google.com/detail/lmhkpmbekcpmknklioeibfkpmmfibljd)         |
+| `SOLID_DEVTOOLS`         | [Solid Devtools](https://chromewebstore.google.com/detail/kmcfjchnmmaeeagadbhoofajiopoceel)         |
+| `SVELTE_DEVTOOLS`        | [Svelte DevTools](https://chromewebstore.google.com/detail/kfidecgcdjjfpeckbblhmfkhmlgecoff)        |
+| `VUEJS_DEVTOOLS`         | [Vue.js DevTools](https://chromewebstore.google.com/detail/nhdogjmejiglipccpnnnanhbledajbpd)        |
+| `VUEJS_DEVTOOLS_BETA`    | [Vue.js devtools (beta)](https://chromewebstore.google.com/detail/ljjemllljcmogpfapbkkighbhhppjdbg) |
+| `VUEJS_DEVTOOLS_V5`      | [Vue.js devtools (v5)](https://chromewebstore.google.com/detail/hkddcnbhifppgmfgflgaelippbigjpjo)   |
+| `VUEJS_DEVTOOLS_V6`      | [Vue.js devtools (v6)](https://chromewebstore.google.com/detail/iaajmlceplecbljialhhkmedjlpdblhp)   |
 
 ### installExtension(extensionIds[, options])
 
@@ -109,7 +109,7 @@ download chrome extension for electron
   - _unzip_: `boolean` - Whether to unzip the downloaded file, default is `true`
   - _attempts_: `number` - Number of attempts to download the extension, default is `5`
   - _outPath_: `string` - The path to save the downloaded extension, default is `path.join(app.getPath('userData'), 'extensions')`
-  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - Download url source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `chrome`.
+  - _source_: `'chrome' | 'unpkg' | 'jsdelivr' | 'npmmirror'` - Download url source. When the OS language is `zh_CN` , the default value is `npmmirror`, otherwise it is `unpkg`.
 
 Returns `Promise<{ filePath: string; unzipPath?: string }>`
 

@@ -58,8 +58,8 @@ export async function installExtension(
   const opts = Object.assign({}, options);
   const { loadExtensionOptions = {}, forceDownload } = opts;
 
-  const targetSession =
-    typeof opts.session === 'string'
+  const targetSession
+    = typeof opts.session === 'string'
       ? session.fromPartition(opts.session)
       : opts.session || session.defaultSession;
 
@@ -80,7 +80,7 @@ export async function installExtension(
     const exts: Electron.Extension[] = [];
     for (let i = 0; i < extensionIds.length; i++) {
       const id = extensionIds[i];
-      await installExtension(id, options).then(ext => {
+      await installExtension(id, options).then((ext) => {
         exts.push(ext);
       });
     }
@@ -90,12 +90,13 @@ export async function installExtension(
   let crxId: string;
   if (typeof extensionIds === 'string') {
     crxId = extensionIds;
-  } else {
+  }
+  else {
     return Promise.reject(new Error(`Invalid extensionReference passed in: "${extensionIds}"`));
   }
 
-  return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then(result => {
-    return targetSession.loadExtension(result.unzipPath as string, loadExtensionOpts).catch(err => {
+  return downloadExtension(crxId, { force: forceDownload, source: opts.source }).then((result) => {
+    return targetSession.loadExtension(result.unzipPath as string, loadExtensionOpts).catch((err) => {
       console.error(`Failed to install extension: ${crxId}`);
       console.error(err);
       return Promise.reject(err);
